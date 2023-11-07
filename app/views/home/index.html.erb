@@ -1,2 +1,32 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="text-center container mt-5">
+  <div class="row">
+    <%= form_with url: converted_path, local: false do |f| %>
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">Base Currency Country</label>
+          <%= f.country_select "base", [], {:prompt => "Please Select Country"}, class: "form-control"%>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">Target Currency Country</label>
+          <%= f.country_select "target", [], {:prompt=> "Please Select Country"}, class: "form-control"%>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3 text-center">
+          <%= f.submit "submit", class:"btn btn-primary"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="container text-center" id="convertions">
+  <h3>Convertions</h3>
+  <div class="card">
+    <h5 class="card-header">from - to</h5>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+    </div>
+  </div>
+</div>
