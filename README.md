@@ -1,24 +1,48 @@
-# README
+# Project Name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project generates a simple currency converter which can be used to convert base currency to target currency and gives realtime conversions and historical information
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Follow these steps to set up the project locally.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+- [Ruby](https://www.ruby-lang.org/en/downloads/) (version 3.1.2)
+- [Rails](https://rubyonrails.org/) (version 6.1.7.6)
+- [Node.js](https://nodejs.org/en/download/) (version 16.20.1)
+- [Yarn](https://yarnpkg.com/en/docs/install) (version 1.22.19)
 
-* Database creation
+### Setup
 
-* Database initialization
+1. Clone the repository:
 
-* How to run the test suite
+    
+   git clone https://github.com/username/project.git
+    
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Navigate to the project directory:
 
-* Deployment instructions
+    
+   cd project
+    
 
-* ...
+3. Install Ruby dependencies:
+
+    
+   bundle install
+    
+
+4. Install Node.js dependencies:
+
+    
+   yarn install
+    
+5. Start the Rails server:
+
+    
+   rails server
+    
+
+   Your application will be accessible at `http://localhost:3000`.
+
