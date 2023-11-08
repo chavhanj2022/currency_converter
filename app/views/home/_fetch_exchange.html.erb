@@ -1,0 +1,15 @@
+<% 
+    time = Time.now
+    formated_time = time.strftime('%Y-%b-%d %H:%M:%S')
+%>
+<div class="container text-center" id="convertions">
+  <div class="card">
+    <div class="card-header">
+      <h6><%= formated_time%></h6>
+    </div>
+    <p></p>
+    <div class="card-body">
+      <h5 class="card-title"><%= result['exchange']%></h5>
+    </div>
+  </div>
+</div>

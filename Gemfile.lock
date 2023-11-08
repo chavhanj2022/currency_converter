@@ -62,6 +62,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    apexcharts (0.2.0)
     ast (2.4.2)
     bindex (0.8.1)
     bootsnap (1.17.0)
@@ -86,6 +87,10 @@ GEM
     crass (1.0.6)
     date (3.3.4)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     ffi (1.16.3)
     globalid (1.2.1)
@@ -93,6 +98,7 @@ GEM
     htmlbeautifier (1.4.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    iso_country_codes (0.7.8)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -272,11 +278,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  apexcharts (~> 0.2.0)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   country_select (~> 8.0)
+  dotenv-rails (~> 2.1, >= 2.1.1)
   htmlbeautifier
+  iso_country_codes
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pry

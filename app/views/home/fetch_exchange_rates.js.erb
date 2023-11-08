@@ -1,0 +1,2 @@
+$('#conversion-result').html('<%= j render partial: 'fetch_exchange', locals: {result: @result} %>');
+$('#time-series').html('<%= j render partial: 'line_chart', locals: {result: @result} %>');

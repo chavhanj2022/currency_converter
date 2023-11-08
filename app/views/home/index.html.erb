@@ -1,32 +1,31 @@
 <div class="text-center container mt-5">
-  <div class="row">
-    <%= form_with url: converted_path, local: false do |f| %>
+  <%= form_with url: converted_path, local: false, id: "exchange-form" do |f| %>
+    <div class="row">
       <div class="col">
-        <div class="mb-3">
-          <label class="form-label">Base Currency Country</label>
-          <%= f.country_select "base", [], {:prompt => "Please Select Country"}, class: "form-control"%>
+        <div class="row">
+          <div class="col-6"><%= f.country_select "base", [], {:prompt => "Base Currency Country", selected: "US"}, class: "form-control me-2"%></div>
+          <div class="col-6"><%= f.country_select "target", [], {:prompt=> "Target Currency Country", selected: "IN"}, class: "form-control me-2"%></div>
+        </div>
+        <div class="row mt-5 mb-5">
+          <div class="col">
+            <%= f.number_field "amount", class:"form-control"%>
+          </div>
+        </div>
+        <div class="row mt-5 mb-5">
+          <div class="col">
+            <%= f.submit "Convert", class:"btn btn-primary"%>
+          </div>
         </div>
       </div>
       <div class="col">
-        <div class="mb-3">
-          <label class="form-label">Target Currency Country</label>
-          <%= f.country_select "target", [], {:prompt=> "Please Select Country"}, class: "form-control"%>
+        <div id="conversion-result">
+          <%= render 'fetch_exchange', result: @result%>
         </div>
       </div>
-      <div class="col">
-        <div class="mb-3 text-center">
-          <%= f.submit "submit", class:"btn btn-primary"%>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-<div class="container text-center" id="convertions">
-  <h3>Convertions</h3>
-  <div class="card">
-    <h5 class="card-header">from - to</h5>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
     </div>
-  </div>
+  <% end %>
 </div>
+<div id="time-series">
+  <%= render 'line_chart', result: @result %>
+</div>
+<script></script>

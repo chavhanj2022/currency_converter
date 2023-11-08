@@ -61,3 +61,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'country_select', '~> 8.0'
+gem 'iso_country_codes'
+gem 'apexcharts', '~> 0.2.0'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
