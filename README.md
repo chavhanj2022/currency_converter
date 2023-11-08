@@ -1,4 +1,4 @@
-# Project Name
+# Currency Converter
 
 This project generates a simple currency converter which can be used to convert base currency to target currency and gives realtime conversions and historical information
 
