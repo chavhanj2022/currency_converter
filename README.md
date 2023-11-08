@@ -13,18 +13,22 @@ Follow these steps to set up the project locally.
 - [Node.js](https://nodejs.org/en/download/) (version 16.20.1)
 - [Yarn](https://yarnpkg.com/en/docs/install) (version 1.22.19)
 
+
+### Before the project start please add your api key's in .env i provide the example of env as ".env.example"
+    i used currencylayer third party api for key generation visit **http://api.currencylayer.com**
+
 ### Setup
 
 1. Clone the repository:
 
-    
-   git clone https://github.com/username/project.git
+
+   git clone https://github.com/chavhanj2022/currency_converter.git
     
 
 2. Navigate to the project directory:
 
     
-   cd project
+   cd currency_converter
     
 
 3. Install Ruby dependencies:
