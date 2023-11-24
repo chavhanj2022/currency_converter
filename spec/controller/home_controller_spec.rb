@@ -1,17 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe HomeController, type: :controller do
-  before do
-    # Stub the time_series and do_exchange methods to return some mock data
-    mock_time_series = [{ name: 'Mock Time Series 1', data: [1, 2, 3] }, { name: 'Mock Time Series 2', data: [4, 5, 6] }]
-    allow(controller).to receive(:time_series).and_return(mock_time_series)
-    allow(controller).to receive(:do_exchange).and_return('Mock Exchange Result')
-  end
+  # before do
+  #   # Stub the time_series and do_exchange methods to return some mock data
+  #   mock_time_series = [{ name: 'Mock Time Series 1', data: [1, 2, 3] },
+  #                       { name: 'Mock Time Series 2', data: [4, 5, 6] }]
+  #   allow(controller).to receive(:time_series).and_return(mock_time_series)
+  #   allow(controller).to receive(:do_exchange).and_return('Mock Exchange Result')
+  # end
 
   shared_examples 'assigns result with expected structure' do
     it 'assigns @result' do
-      get action, params: params, format: format
-
+      get(action, params:, format:)
+      debugger
       result = assigns(:result)
       expect(result).to be_a(Hash)
       expect(result).to have_key('time_frame').and have_key('exchange')
