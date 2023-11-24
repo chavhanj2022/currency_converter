@@ -12,7 +12,6 @@ RSpec.describe HomeController, type: :controller do
   shared_examples 'assigns result with expected structure' do
     it 'assigns @result' do
       get(action, params:, format:)
-      debugger
       result = assigns(:result)
       expect(result).to be_a(Hash)
       expect(result).to have_key('time_frame').and have_key('exchange')
