@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  protect_from_forgery with: :exception, except: :fetch_exchange_rates
   def index
     result = time_series
     exchange = do_exchange('USD', 'INR', "1")
@@ -48,6 +49,7 @@ class HomeController < ApplicationController
   end
 
   def do_exchange(base_currency = 'INR', target_currency = 'USD', amount = '10')
+    
     
     url = URI.parse("#{ENV['CURRENCY_LAYER']}/convert?access_key=#{ENV['CURRENCY_LAYER_KEY']}&from=#{base_currency}&to=#{target_currency}&amount=#{amount}")
     http = Net::HTTP.new(url.host, url.port)
